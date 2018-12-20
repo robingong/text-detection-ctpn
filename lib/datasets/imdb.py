@@ -1,6 +1,6 @@
 import os
 import os.path as osp
-import PIL
+from PIL import Image
 import numpy as np
 import scipy.sparse
 from lib.utils.bbox import bbox_overlaps
