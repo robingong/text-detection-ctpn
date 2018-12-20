@@ -49,6 +49,7 @@ python ToVoc.py
 ```
 - to convert the prepared training data into voc format. It will generate a folder named TEXTVOC. move this folder to data/ and then run
 ```shell
+.../prepare_training_data$mv TEXTVOC ../../data/
 cd ../../data
 ln -s TEXTVOC VOCdevkit2007
 ```
