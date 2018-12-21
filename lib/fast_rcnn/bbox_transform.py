@@ -28,10 +28,11 @@ def bbox_transform(ex_rois, gt_rois):
     targets_dw = np.log(gt_widths / ex_widths)
     # alex
     try:
-        print("log(",gt_heights, "/", ex_heights,")")
+        # print("log(",gt_heights, "/", ex_heights,")")
         targets_dh = np.log(gt_heights / ex_heights)
-    except RuntimeWarning:
-        print(gt_heights,"   ",ex_heights)
+    except BaseException: #RuntimeWarning:
+        print("log(", gt_heights, "/", ex_heights, ")")
+        targets_dh = np.log(gt_heights / ex_heights)
 
     targets = np.vstack(
         (targets_dx, targets_dy, targets_dw, targets_dh)).transpose()
