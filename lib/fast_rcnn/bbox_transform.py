@@ -30,7 +30,7 @@ def bbox_transform(ex_rois, gt_rois):
     try:
         # print("log(",gt_heights, "/", ex_heights,")")
         targets_dh = np.log(gt_heights / ex_heights)
-    except BaseException: #RuntimeWarning:
+    except : #RuntimeWarning:
         print("log(", gt_heights, "/", ex_heights, ")")
         targets_dh = np.log(gt_heights / ex_heights)
 
