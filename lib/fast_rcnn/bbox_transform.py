@@ -28,8 +28,8 @@ def bbox_transform(ex_rois, gt_rois):
     targets_dw = np.log(gt_widths / ex_widths)
     # alex
     try:
-        if gt_heights / ex_heights <=0 :
-            print("-->>log(",gt_heights, "/", ex_heights,")")
+        # if gt_heights / ex_heights <=0 :
+        #     print("-->>log(",gt_heights, "/", ex_heights,")")
 
         targets_dh = np.log(gt_heights / ex_heights)
     except : #RuntimeWarning:
