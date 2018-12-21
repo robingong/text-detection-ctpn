@@ -41,6 +41,9 @@ chmod +x make.sh
 - Modify the path and gt_path in prepare_training_data/split_label.py according to your dataset. And run
 ```shell
 cd lib/prepare_training_data
+rm -r label_tmp/
+rm -r re_image/*
+rm -r TEXTVOC/
 python split_label.py
 ```
 - it will generate the prepared data in current folder, and then run
